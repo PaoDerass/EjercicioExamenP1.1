@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de Descuentos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Calculo de Descuentos en despensa</h1>
+    
+        <form id="discountForm" class="p-4 border rounded bg-light">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Productos</h4>
+                    <div class="form-group">
+                        <label for="product1">Producto 1</label>
+                        <input type="number" class="form-control" id="producto1" placeholder="Ingrese el precio">
+                    </div>
+                    <div class="form-group">
+                        <label for="product2">Producto 2</label>
+                        <input type="number" class="form-control" id="producto2" placeholder="Ingrese el precio">
+                    </div>
+                    <div class="form-group">
+                        <label for="product3">Producto 3</label>
+                        <input type="number" class="form-control" id="producto3" placeholder="Ingrese el precio">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h4>&nbsp;</h4>
+                    <div class="form-group">
+                        <label for="product4">Producto 4</label>
+                        <input type="number" class="form-control" id="producto4" placeholder="Ingrese el precio">
+                    </div>
+                    <div class="form-group">
+                        <label for="product5">Producto 5</label>
+                        <input type="number" class="form-control" id="producto5" placeholder="Ingrese el precio">
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="border-top pt-3 mt-3">
+                <h4>Resumen</h4>
+                <div class="form-group">
+                    <label for="subtotal">Subtotal</label>
+                    <input type="text" class="form-control" id="subtotal" readonly>
+                </div>
+                <div class="form-group">
+                    <label id="discountLabel" for="discount">Descuento 0%</label>
+                    <input type="text" class="form-control" id="descuento" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="total">Total a Pagar</label>
+                    <input type="text" class="form-control" id="total" readonly>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <button type="button" class="btn btn-primary mr-2" onclick="calcularDescuento()">Calcular</button>
+                <button type="button" class="btn btn-secondary" onclick="LimpiarForm()">Limpiar</button>
+            </div>
+        </form>
+    </div>
+
+    
+</body>
+</html>
