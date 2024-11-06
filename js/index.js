@@ -38,7 +38,7 @@ function calcularDescuento() {
     document.getElementById('total').value = `L ${total.toFixed(2)}`;
 }
 
-function limpiarForm() {
+function LimpiarForm() {
     document.getElementById('descuentoForm').reset();
     document.getElementById('descuentoLabel').innerText = "Descuento 0%";
     document.getElementById('subtotal').value = "";
